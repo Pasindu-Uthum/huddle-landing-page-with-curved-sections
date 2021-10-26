@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://kit.fontawesome.com/58e77607fe.js" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Huddle landing page with curved sections</title>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><img src="./images/logo.svg" alt="Huddle Logo"></li>
+      <li><a href="#">Try it Free</a></li>
+    </ul>
+  </nav>
+
+  <article class="heading">
+    <h1>Build The Community Your Fans Will Love</h1>
+    <p>Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create connections
+      with your users as you engage in genuine discussion.</p>
+    <button>Get Started For Free</button>
+    <img src="./images/screen-mockups.svg" alt="Mockups">
+  </article>
+
+  <section class="stats">
+    <div class="stat-box">
+      <img src="./images/icon-communities.svg" alt="Communities">
+      <h1>1.4K+</h1>
+      <p>Communities Formed</p>
+    </div>
+
+    <div class="stat-box">
+      <img src="./images/icon-messages.svg" alt="Messages">
+      <h1>2.7m+</h1>
+      <p>Messages Sent</p>
+    </div>
+  </section>
+
+  <section class="posts-section">
+    <div class="posts">
+      <img src="./images/bg-section-top-desktop-1.svg" alt="Background">
+      <div class="content">
+        <div class="textContent">
+          <h1>Grow Together</h1>
+          <p>Generate meaningful discussions with your audience and build a strong, loyal community. Think of the
+            insightful conversations you miss out with a feedback form.</p>
+        </div>
+        <div class="image">
+          <img src="./images/illustration-grow-together.svg" alt="Grow Together">
+        </div>
+      </div>
+      <img src="./images/bg-section-bottom-desktop-1.svg" alt="Background">
+    </div>
+
+    <div class="posts">
+      <div class="content" style="background-color: white; margin: 150px 0;">
+        <div class="image">
+          <img src="./images/illustration-flowing-conversation.svg" alt="Flowing Conversations">
+        </div>
+        <div class="textContent">
+          <h1>Flowing Conversations</h1>
+          <p>You wouldn't paginate a conversation in real life, so why do it online? Our threads have just-in-time
+            loading
+            for a more natural flow.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="posts">
+      <img src="./images/bg-section-top-desktop-2.svg" alt="Background">
+      <div class="content">
+        <div class="textContent">
+          <h1>Your Users</h1>
+          <p>It takes no time at all to integrate Huddle with your app's authentication solution. This means, once
+            signed
+            in to your app, your users can start chatting immediately.</p>
+        </div>
+        <div class="image">
+          <img src="./images/illustration-your-users.svg" alt="Your Users">
+        </div>
+      </div>
+      <img src="./images/bg-section-bottom-desktop-2.svg" alt="Background">
+    </div>
+  </section>
+
+  <div class="ready">
+    <h1>Ready To Build Your Community?</h1>
+    <button>Get Started For Free</button>
+  </div>
+
+  <footer>
+    <img src="./images/bg-footer-top-desktop.svg" alt="Background">
+    <div class="content">
+      <div class="contact">
+        <img src="./images/logo-white.svg" alt="Huddle Logo">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo adipisci ad autem magnam cum alias illo,
+          recusandae blanditiis.</p>
+        <span><img src="./images/icon-phone.svg" alt="Phone"> Phone: +1-543-123-4567</span>
+        <span><img src="./images/icon-email.svg" alt="Email"> example@huddle.com</span>
+        <div class="sm">
+          <span><i class="fab fa-facebook-square"></i></span>
+          <span><i class="fab fa-instagram"></i></span>
+          <span><i class="fab fa-twitter-square"></i></span>
+        </div>
+      </div>
+      <div class="newsletter">
+        <h1>NEWSLETTER</h1>
+        <p>To recieve tips on how to grow your community, sign up to our weekly newsletter. We'll never send you spam or
+          pass on your email address.</p>
+        <input type="text" placeholder="Email" id="input">
+        <button id="btn">Subscribe</button>
+        <p class="warning">Check your Email address please</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const input = document.getElementById('input');
+    const warning = document.querySelector('.warning');
+    const btn = document.getElementById('btn');
+
+    function checkAt() {
+      if (!input.value.includes('@')) {
+        warning.style.display = 'block';
+      } else {
+        warning.style.display = 'none';
+      }
+    }
+
+    input.addEventListener('keydown', (e) => {
+      if (e.keyCode === 13) {
+        checkAt();
+      }
+    });
+
+    btn.addEventListener('click', checkAt);
+  </script>
+</body>
+
+</html>
